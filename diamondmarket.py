@@ -22,9 +22,9 @@ def diamond_market(checking_price): #checking_price compares in-game prices to t
                         price = diamondmarket_response.json()[i]['price_per_diamond']
 
                         if price <= checking_price: # compares the prices and the user's checking price, and prints out listings that satisfy, else
-                                numberOfEntry = i
                                 print(f"USER {seller} REMAINING {remaining} PRICE {price}")
                                 numberOfEntry += 1
+                                print(numberOfEntry)
                 except:
                         continue
 
