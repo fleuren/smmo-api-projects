@@ -12,7 +12,7 @@ guild_ID = host_response.json()['guild']['id']
 guild_NAME = host_response.json()['guild']['name']
 print(f"{guild_ID} | {guild_NAME}\n")
 
-tournament_endpoint = f'https://api.simple-mmo.com/v1/guilds/members/{guild_ID}?api_key=IcE88QHarjzgSsYQKGMwxkZ6tJLcNDtMPBon3SMiS3Ra7GEtLstHCo9qf7ct0vgTBkVNVUsPmFsrBLkq'
+tournament_endpoint = f'https://api.simple-mmo.com/v1/guilds/members/{guild_ID}?api_key={api_key}'
 tournament_response = requests.post(tournament_endpoint)
 def inactive():
     for i in range(80):
