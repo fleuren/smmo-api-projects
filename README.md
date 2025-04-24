@@ -6,13 +6,14 @@ Feature/s:
 Known bugs (and attempts at fixing):
 - Outputs from most expensive to least expensive, see lowest listing for the cheapest value.
 
-# Guild Inactive
+# Guild Insctivity Tracker
 Feature/s:
 - Outputs the name, id, and the date and time of an inactive user's last activity, based on the given range (in days).
 
-# Level Tracker
+# Guild Member Level Tracker
 Feature/s:
 - Tracks the levels of all guild members at a fixed point in time (start of script).
+*may evolve into allowing to track other specific stats, such as total steps, pve/pvp kills, etc.*
 
 # Planned Scripts:
 - Orphanage Progress and Boosts display
