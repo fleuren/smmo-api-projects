@@ -1,4 +1,4 @@
-# smmo-api-projects
+# Fleuren's SimpleMMO API Projects
 # Diamond Market Tracker
 Feature/s:
 - Outputs the listing based on an inputted price.
