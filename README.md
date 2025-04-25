@@ -26,6 +26,6 @@ Feature/s:
 # Planned Scripts:
 - Orphanage Progress and Boosts display
 - World boss timers (with windows notification)
---Season Guild Leaderboard Display (with ability to refresh)--
+-Season Guild Leaderboard Display (with ability to refresh)-
 - Guild display (all and specific guilds)
 - Other projects (TBA)
