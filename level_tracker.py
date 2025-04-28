@@ -14,7 +14,7 @@ print(f"{guild_ID} | {guild_NAME}\n")
 
 tournament_endpoint = f'https://api.simple-mmo.com/v1/guilds/members/{guild_ID}?api_key={api_key}'
 tournament_response = requests.post(tournament_endpoint)
-def inactive():
+def level():
     for i in range(80):
         try:
             member_name = tournament_response.json()[i]['name']
@@ -26,5 +26,5 @@ def inactive():
     print(f"Member Count: {i}")
 
 
-inactive()
+level()
 rateLimit = host_response.headers["X-RateLimit-Remaining"]
