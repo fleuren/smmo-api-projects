@@ -13,7 +13,7 @@ clear()
 build = "Fleuren's Seasonal Guild Leaderboard App b300425"
 notice = f"Note: You may risk suspension of your API token, if you navigate this program too fast.\nCurrent rules for API use is 40 calls per minute. This program currently uses 4 calls per instance.\n\nThere is no implementation of a 'live' counter as of this build, please tread carefully."
 number_formatting = "{:,}"
-command_menu =f"Where would you like to go?\n1. Leaderboard (2 API calls)\n2. Check a specific guild (3 API calls)\n3. PVP Simulator\n4. Guild Difference Calculator\n\n0. Quit"
+command_menu =f"Where would you like to go?\n1. Leaderboard (2 API calls)\n2. Check a specific guild (3 API calls)\n3. PVP Simulator (2 API calls)\n4. Guild Difference Calculator (3 API calls)\n\n0. Quit"
 warn_menu = "Note that there is no way to go back to the menu as of this build. Press 1 to pass this step."
 
 
@@ -118,7 +118,7 @@ def guild_specific(gs_id):
                 menu(command)
 
 def simulation(player_id):
-    print(f"Feature is currently in development\n")
+    
     playerinfo_endpoint = f'https://api.simple-mmo.com/v1/player/info/{player_id}?api_key={api_key}'
     playerinfo_response = requests.post(playerinfo_endpoint)
     yourinfo_endpoint = f'https://api.simple-mmo.com/v1/player/me?api_key={api_key}'
@@ -254,6 +254,8 @@ def guildTarget(target_id):
     host_exp = yourguild_response.json()['current_season_exp']
     host_members = yourguild_response.json()['member_count']
     difference = target_exp-host_exp
+    if difference <= -1:
+        difference = 0
 
     for i in range (host_members):
         member_warrior = yourguildmmeber_response.json()[i]['warrior']
@@ -296,7 +298,6 @@ def menu(command):
         print("Which player would you like to check (input ID):")
         print(warn_menu)
         player_id = int(input())
-        guild_specific(guild_id)
         simulation(player_id)
     if command == 4:
         clear()
@@ -304,13 +305,13 @@ def menu(command):
         print("What's your target guild (Guild ID Needed)?")
         print(warn_menu)
         target_id = int(input())
-        guild_specific(guild_id)
         guildTarget(target_id)
         
     if command == 0:
         print(build)
         print("Goodbye!")
         time.sleep(1)
+
 print(command_menu)
 command = int(input())
 menu(command)
