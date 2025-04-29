@@ -2,11 +2,13 @@
 - if reused/referenced, please credit, thanks!
 - may be referred to as "Complex Cat" (parody of Simple Wolf, thanks RacknRoll)
 # Main Project
-Guild Data Analysis Tool (guildcompanion.py)
+Guild-focused Companion App (smmocompanion.py)
 - Tracks current season
 - Can track specific guilds (input guild ID)
 - Outputs data for guild members
 - SGL can now be refreshed
+- Can calculate the difference and needed actions between the host's guild and their target guild (from a snapshot, not live)
+- Added a very basic PVP simulator (compares stats, does not consider hit chance / rng)
 
 # Side Projects
 Diamond Market Tracker (diamondmarket.py)
