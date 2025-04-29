@@ -1,5 +1,6 @@
 # Fleuren's SimpleMMO API Projects
 - if reused/referenced, please credit, thanks!
+- may be referred to as "Complex Cat" (parody of Simple Wolf, thanks RacknRoll)
 # Diamond Market Tracker (diamondmarket.py)
 Feature/s:
 - Outputs the listing based on an inputted price.
