@@ -9,4 +9,5 @@
 ...and many more!
 
 > This used to be a repository for all of my API projects, but all projects are currently being implemented into Complex Cat.
-
+> Known internally as smmocompanion.py
+> All functions will be made into a separate .py file for read-only / study purposes (coming soon)
